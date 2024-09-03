@@ -66,6 +66,7 @@ int situationCheck(char (*currentGrid)[3][3]) {
             returnValue = checkPoints(rowX, rowO, currentGrid);
         }
     }   
+    
     // check the vertcal lines
     for (int i = 0; i < 3; i++) {
         rowO = 0;
@@ -82,6 +83,7 @@ int situationCheck(char (*currentGrid)[3][3]) {
             returnValue = checkPoints(rowX, rowO, currentGrid);
         }
     }  
+    
     // check the first diagonal lines
     int x = 0;
     int y = 0;
@@ -100,6 +102,7 @@ int situationCheck(char (*currentGrid)[3][3]) {
         if (returnValue == 1) {
             returnValue = checkPoints(rowX, rowO, currentGrid);
         }
+    
     // check the second diagonal line
     x = 0;
     y = 2;
@@ -118,6 +121,7 @@ int situationCheck(char (*currentGrid)[3][3]) {
         if (returnValue == 1) {
             returnValue = checkPoints(rowX, rowO, currentGrid);
         } 
+    
     //draw check
     int draw = 0;
     for (int i = 0; i<3; i++) {
@@ -133,6 +137,7 @@ int situationCheck(char (*currentGrid)[3][3]) {
     }
     return returnValue;
 }  
+
 
 int checkPoints(int x, int o, char (*currentGrid)[3][3]) {
     // Checks the score of the situationCheck function and determines the other player as the winner or continues the game
@@ -150,6 +155,7 @@ int checkPoints(int x, int o, char (*currentGrid)[3][3]) {
         return 1;
     }
 }
+
 
 int main() {
     int gameIsOn = 1;
